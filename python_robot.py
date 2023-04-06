@@ -1,6 +1,7 @@
 import re
 from pprint import pprint
 from datetime import datetime
+import yaml
 
 
 start_android_app = "ActivityTaskManager: START u0"
@@ -46,6 +47,14 @@ def extract_text():
 
     pprint(extract_info)
 
+
+def yaml_file():
+    file = open('output.yml', 'w')
+    yaml.dump(extract_info, file)
+    file.close()
+
+
 if __name__ == "__main__":
     received_text()
     extract_text()
+    yaml_file()
