@@ -8,7 +8,7 @@ Library  Collections
 Verify lifespan of the apps
 
 *** Keywords ***
-Lifespan of the apps
+Verify lifespan of the apps
 
     ${output}=    Get File      output.yml
     ${info}=    Evaluate   yaml.load('''${output}''')
